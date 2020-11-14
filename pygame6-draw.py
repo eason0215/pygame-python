@@ -35,11 +35,30 @@ class FireTruck(Car):
         
     def soundPlay(self):
         print('start playing sound')
+class dog(Car):
+    def __init__(self, color, foodbar, waterbar):
+        self.color = YELLOW
+        self.foodbar = foodbar
+        self.waterbar = waterbar
+        self.x = 0
+        self.y = 0
+        self.speed_x = 5
+        self.speed_y = 5
+    def run(self):
+        self.x = self.x + self.speed_x
+        self.y = self.y + self.speed_y
+        self.foodbar = self.foodbar - 1
+        self.waterbar = self.waterbar - 1
+    
         
+        
+        
+       
         
         
 car1 = Car(4, False, YELLOW)
 fireTruck1 = FireTruck(2, False, RED, 1000)
+dog1 = (YELLOW, 100, 100)
 
 print(car1.x)
 print(car1.y)
@@ -58,3 +77,21 @@ for i in range(20):
     fireTruck1.run()
 print(fireTruck1.x)
 print(fireTruck1.y)
+
+
+for i in range(10):
+    dog1.run()
+print(dog1.x)
+print(dog1.y) 
+print('run')
+print(dog1.foodbar)
+print(dog1.waterbar)
+for i in range(10):
+    
+print('stop')
+print(dog1.foodbar)
+print(dog1.waterbar)        
+
+
+
+
